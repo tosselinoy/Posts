@@ -6,7 +6,7 @@ import { MeterialModule } from './material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { SearchFilterPipe } from 'src/app/pipe-filter/search-filter.pipe';
-// import { HighlightDirective } from 'src/highlight.directive';
+import { StoreModule } from '@ngrx/store';
 
 import { AppComponent } from './app.component';
 import { PostsComponent } from './components/posts/posts.component';
