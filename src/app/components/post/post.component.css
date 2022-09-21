@@ -1,0 +1,13 @@
+.cardStyle {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  border: 8px solid;
+  padding: 1rem;
+  border-image: linear-gradient(45deg, #086375, #1dd3b0) 1;
+}

@@ -1,0 +1,25 @@
+<div class="container">
+  <!-- Input Search (UI- Angular material) -->
+  <mat-form-field class="searchBox" appearance="fill">
+    <mat-label>Search a post</mat-label>
+    <!-- ngModel - 'Search text' for pipe filter -->
+    <input matInput placeholder="title/body" [(ngModel)]="searchText" />
+  </mat-form-field>
+
+  <!-- Accordion(UI- Angular material) -->
+  <mat-accordion>
+    <!-- ngFor - display all the post -->
+    <mat-expansion-panel
+      *ngFor="let post of posts | postFilter: searchText"
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header class="panelStyle">
+        <mat-panel-title class="titleStyle">{{ post.title }} </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>{{ post.body }}</p>
+      <!-- Route to the correct page -->
+      <a [routerLink]="['post', post.id]">Go to The Post</a>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
